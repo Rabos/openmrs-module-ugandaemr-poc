@@ -1,0 +1,97 @@
+<htmlform formName="HMIS ACP 007:MISSED APPOINTMENT TRACKING REGISTER"
+          formDescription="HIV Testing Services Client Card"
+          formEncounterType="264daIZd-f80e-48fe-nba9-P37f2W1905Pv"
+          formUuid="def3ba52-46ed-472e-ab54-3c73edc74755"
+          formVersion="1.2"
+          formAddMetadata="yes"
+          formUILocation="patientDashboard.visitActions"
+          formOrder="6"
+          formIcon="icon-medkit"
+          formShowIf="(visit.active || !visit.active) &amp;&amp; patient.person.dead==false"
+          formDisplayStyle="Standard"
+          formLabel="HTS Client Card">
+
+    <div class="poc-page-frame">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Missed Appointment Register</h3>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-2"><submit/></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label>Missed Appointment Date</label>
+                <encounterDate default="today" disallowMultipleEncountersOnDate="block"/>
+            </div>
+            <div>
+                <label><strong>Service Point:</strong></label><br/>
+                <obs conceptId="164993" answerConceptId="165047" answerLabel="ART Clinic" style="checkbox"/><br/>
+                <obs conceptId="164993" answerConceptId="165048" answerLabel="TB Clinic" style="checkbox"/><br/>
+                <obs conceptId="164993" answerConceptId="90002" style="checkbox"/>
+            </div>
+            <div>
+                <label><strong>Medication Refill:</strong></label><br/>
+                <obs conceptId="160288" answerConceptId="164972" answerLabel="ART ReFill" style="checkbox"/><br/>
+                <obs conceptId="160288" answerConceptId="164971" answerLabel="TB Meds/TPT" style="checkbox"/><br/>
+                <obs conceptId="160288" answerConceptId="90002" style="checkbox"/>
+            </div>
+        </div>
+        <div class="row">
+            <br/>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label><strong>Mode of Care:</strong></label><br/>
+                <obs conceptId="165143"/>
+            </div>
+            <div class="col-md-4">
+                <label><strong>Next of Kin Contact:</strong></label><br/>
+                <obs conceptId="165052"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-10">
+                <h3><strong>Tracking Information</strong></h3>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col-md-4">
+                <label><strong>Follow Up Attempt </strong></label>
+            </div>
+            <div class = "col-md-4">
+                <label><strong>Follow Up Date </strong></label>
+            </div>
+            <div class = "col-md-4">
+                <label><strong>Follow Up Person</strong><span class="required">*</span></label><br/>
+                <encounterProvider required="true"/>
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class = "col-md-4">
+                <label><strong>Follow Up Action </strong></label>
+            </div>
+            <div class = "col-md-4">
+                <label><strong>Other Action Specify </strong></label>
+            </div>
+            <div class = "col-md-4">
+                <label><strong>Follow Up Outcome</strong></label><br/>
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class = "col-md-4">
+                <label><strong>Date Returned </strong></label>
+            </div>
+            <div class = "col-md-4">
+                <label><strong>Cause of Death </strong></label><br/>
+                <obs conceptId="5002" />
+            </div>
+            <div class = "col-md-4">
+                <label><strong>Comment</strong></label><br/>
+            </div>
+        </div>
+    </div>
+
+</htmlform>
