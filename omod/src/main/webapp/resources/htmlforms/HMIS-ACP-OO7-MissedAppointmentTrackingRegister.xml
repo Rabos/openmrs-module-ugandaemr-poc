@@ -19,79 +19,93 @@
             <div class="col-md-4"></div>
             <div class="col-md-2"><submit/></div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label>Missed Appointment Date</label>
-                <encounterDate default="today" disallowMultipleEncountersOnDate="block"/>
+
+        <div class="card col-md-12">
+            <div class="card-header">
+                Registration Information
             </div>
-            <div>
-                <label><strong>Service Point:</strong></label><br/>
-                <obs conceptId="164993" answerConceptId="165047" answerLabel="ART Clinic" style="checkbox"/><br/>
-                <obs conceptId="164993" answerConceptId="165048" answerLabel="TB Clinic" style="checkbox"/><br/>
-                <obs conceptId="164993" answerConceptId="90002" style="checkbox"/>
-            </div>
-            <div>
-                <label><strong>Medication Refill:</strong></label><br/>
-                <obs conceptId="160288" answerConceptId="164972" answerLabel="ART ReFill" style="checkbox"/><br/>
-                <obs conceptId="160288" answerConceptId="164971" answerLabel="TB Meds/TPT" style="checkbox"/><br/>
-                <obs conceptId="160288" answerConceptId="90002" style="checkbox"/>
-            </div>
-        </div>
-        <div class="row">
-            <br/>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label><strong>Mode of Care:</strong></label><br/>
-                <obs conceptId="165143"/>
-            </div>
-            <div class="col-md-4">
-                <label><strong>Next of Kin Contact:</strong></label><br/>
-                <obs conceptId="165052"/>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-10">
-                <h3><strong>Tracking Information</strong></h3>
-            </div>
-        </div>
-        <div class = "row">
-            <div class = "col-md-4">
-                <label><strong>Follow Up Attempt </strong></label>
-            </div>
-            <div class = "col-md-4">
-                <label><strong>Follow Up Date </strong></label>
-            </div>
-            <div class = "col-md-4">
-                <label><strong>Follow Up Person</strong><span class="required">*</span></label><br/>
-                <encounterProvider required="true"/>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Missed Appointment Date</label>
+                        <encounterDate default="today" disallowMultipleEncountersOnDate="block"/>
+                    </div>
+                    <div class="col-md-4">
+                        <label><strong>Service Point:</strong></label><br/>
+                        <obs conceptId="164993" answerConceptId="165047" answerLabel="ART Clinic" style="checkbox"/><br/>
+                        <obs conceptId="164993" answerConceptId="165048" answerLabel="TB Clinic" style="checkbox"/><br/>
+                        <obs conceptId="164993" answerConceptId="90002" answerLabel="Other Specify:" commentFieldLabel="" class="vertical-layout-options"/>
+                    </div>
+                    <div class="col-md-4">
+                        <label><strong>Medication Refill:</strong></label><br/>
+                        <obs conceptId="160288" answerConceptId="164972" answerLabel="ART ReFill" style="checkbox"/><br/>
+                        <obs conceptId="160288" answerConceptId="164971" answerLabel="TB Meds/TPT" style="checkbox"/><br/>
+                        <obs conceptId="160288" answerConceptId="90002" answerLabel="Other Specify:" commentFieldLabel="" class="vertical-layout-options"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <br/>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label><strong>Mode of Care:</strong></label><br/>
+                        <obs conceptId="165143"/>
+                    </div>
+                    <div class="col-md-4">
+                        <label><strong>Next of Kin Contact:</strong></label><br/>
+                        <obs conceptId="165052"/>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class = "row">
-            <div class = "col-md-4">
-                <label><strong>Follow Up Action </strong></label>
+        <div class="card col-md-12">
+            <div class="card-header">
+                Tracking Information
             </div>
-            <div class = "col-md-4">
-                <label><strong>Other Action Specify </strong></label>
-            </div>
-            <div class = "col-md-4">
-                <label><strong>Follow Up Outcome</strong></label><br/>
+            <div class="card-body">
+                <div class = "row">
+                    <div class = "col-md-4">
+                        <label><strong>Follow Up Attempt </strong></label>
+                    </div>
+                    <div class = "col-md-4">
+                        <label><strong>Follow Up Date </strong></label>
+                    </div>
+                    <div class = "col-md-4">
+                        <label><strong>Follow Up Person</strong><span class="required">*</span></label><br/>
+                        <encounterProvider required="true"/>
+                    </div>
+                </div>
+
+                <div class = "row">
+                    <div class = "col-md-4">
+                        <label><strong>Follow Up Action </strong></label>
+                        <obs id="phone-call" conceptId="165100" answerConceptId="165102" answerLabel="Phone Call" style="dropdown" class="vertical-layout-options"/><br/>
+                        <obs id="home-visit" conceptId="165100" answerConceptId="165103" answerLabel="Home Visit" style="dropdown" class="vertical-layout-options"/><br/><br/>
+                        <obs id="followup-type-other" conceptId="165100" answerConceptId="5622" answerLabel="Other Specify:" commentFieldLabel="" class="vertical-layout-options"/>
+                    </div>
+                    <div class = "col-md-4">
+                        <label><strong>Follow Up Outcome</strong></label><br/>
+                    </div>
+                    <div class = "col-md-4">
+                        <label><strong>Date Returned </strong></label>
+                    </div>
+                </div>
+
+                <div class = "row">
+                    <div class = "col-md-4">
+                        <label><strong>Cause of Death </strong></label><br/>
+                        <obs conceptId="5002" />
+                    </div>
+                    <div class = "col-md-4">
+                        <label><strong>Comment</strong></label><br/>
+                        <obs conceptId="159395"
+                             class="commenttextarea" style="textarea"/>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class = "row">
-            <div class = "col-md-4">
-                <label><strong>Date Returned </strong></label>
-            </div>
-            <div class = "col-md-4">
-                <label><strong>Cause of Death </strong></label><br/>
-                <obs conceptId="5002" />
-            </div>
-            <div class = "col-md-4">
-                <label><strong>Comment</strong></label><br/>
-            </div>
-        </div>
     </div>
 
 </htmlform>
